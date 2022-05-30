@@ -5,6 +5,6 @@ categories: [software]
 tags: [proton, ssl, email, docker]
 ---
 
-![Proton Mail Logo](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/protonmail-logo.png)
+![Proton Mail Logo](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/protonmail-logo.png | width=50)
 
 [Proton Mail](https://proton.me/mail) is a secure and encrypted email service.
