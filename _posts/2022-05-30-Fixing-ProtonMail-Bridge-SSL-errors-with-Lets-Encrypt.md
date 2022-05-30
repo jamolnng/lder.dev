@@ -46,6 +46,8 @@ However, I did not want to spend hours digging around for documentation specific
 
 This is where Let's Encrypt comes in.
 
+![Let's Encrypt Banner Logo](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/le-logo-wide.png){: width="70%" }
+
 ## Let's Encrypt
 
 Let's Encrypt is a non-profit certificate authority run by Internet Security Research Group that provides X.509 certificates for Transport Layer Security (TLS) encryption at no charge. Here' we are going to use Let's Encrypt certificates to replace the self-signed ones that Proton Mail Bridge generates itself. This should fix errors that come with using self-signed certificates and finally allow our applications to use Proton Mail to send emails.
