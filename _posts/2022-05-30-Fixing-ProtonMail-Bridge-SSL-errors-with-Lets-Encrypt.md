@@ -5,9 +5,6 @@ categories: [software]
 tags: [proton, ssl, email, docker]
 ---
 
-> Note: I do not suggest exposing Proton Mail Bridge to the internet as it defeats some of the purpose of Proton Mail
-{: .prompt-info }
-
 ![Proton Mail Logo](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/protonmail-logo.png){: width="70%" }
 
 [Proton Mail](https://proton.me/mail) is a secure and encrypted email service that uses client side encryption to ensure your data is encrypted before it is sent. This offers a greater level of security of regular old email, but the trade-off being that you need to use one of Proton Mail's clients to be able to do the client side encryption. This is perfectly workable for the normal user, but for people like me, who use 3rd-party email clients like [Thunderbird](https://www.thunderbird.net) or self-host applications that use SMTP email for password resets, notifications, etc. this can cause issues since they do not have the client side encryption support that lets them directly use Proton Mail's services to send emails.
@@ -56,6 +53,9 @@ This is where Let's Encrypt comes in.
 Let's Encrypt is a non-profit certificate authority run by Internet Security Research Group that provides X.509 certificates for Transport Layer Security (TLS) encryption at no charge. Here' we are going to use Let's Encrypt certificates to replace the self-signed ones that Proton Mail Bridge generates itself. This should fix errors that come with using self-signed certificates and finally allow our applications to use Proton Mail to send emails.
 
 ## Installation
+
+> Note: I do not suggest exposing Proton Mail Bridge to the internet as it defeats some of the purpose of Proton Mail
+{: .prompt-info }
 
 ### Generating Certificates with Let's Encrypt
 First, let's generate our certificates so they are ready to go when we install Proton Mail Bridge. I personally use Cloudflare as my DNS provider which has great support built into Let's Encrypt's `certbot` tool which is the tool we will be using to generate certificates.
