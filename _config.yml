@@ -29,7 +29,7 @@ description: >-                        # used by seo meta and the atom feed
   documentation for small projects of mine
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://lder.dev'
 
 github:
   username: jamolnng             # change to your github username
@@ -83,7 +83,7 @@ theme_mode: dark   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://avatars.githubusercontent.com/u/1132336?v=4
 
 # boolean type, the global switch for ToC in posts.
 toc: true
