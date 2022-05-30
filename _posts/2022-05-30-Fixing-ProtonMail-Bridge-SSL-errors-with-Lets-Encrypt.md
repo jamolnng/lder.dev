@@ -5,6 +5,9 @@ categories: [software]
 tags: [proton, ssl, email, docker]
 ---
 
+> Note: I do not suggest exposing Proton Mail Bridge to the internet as it defeats some of the purpose of Proton Mail
+{: .prompt-info }
+
 ![Proton Mail Logo](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/protonmail-logo.png){: width="70%" }
 
 [Proton Mail](https://proton.me/mail) is a secure and encrypted email service that uses client side encryption to ensure your data is encrypted before it is sent. This offers a greater level of security of regular old email, but the trade-off being that you need to use one of Proton Mail's clients to be able to do the client side encryption. This is perfectly workable for the normal user, but for people like me, who use 3rd-party email clients like [Thunderbird](https://www.thunderbird.net) or self-host applications that use SMTP email for password resets, notifications, etc. this can cause issues since they do not have the client side encryption support that lets them directly use Proton Mail's services to send emails.
