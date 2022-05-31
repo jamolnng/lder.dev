@@ -119,7 +119,7 @@ Once you've logged in, enter the `info` command to get your local username and p
 
 Save this information as you'll use it to send and receive emails from your applications. Enter the `exit` command to exit the Proton Mail Bridge configuration tool.
 
-Finally, we are going to start the Proton Mail Bridge service, with our generated certificates, that will allow us to use IMAP and SMTP locally.
+Now we are going to start the Proton Mail Bridge service with our generated certificates. This will allow us to use IMAP and SMTP locally.
 
 ```bash
 docker run -d --name=protonmail-bridge \
@@ -130,6 +130,6 @@ docker run -d --name=protonmail-bridge \
 ```
 {: .nolineno }
 
-The last thing you'll need to do is add a local DNS record to point to the Proton Mail Bridge server. The benefit of the wildcard certificate is you can name it any subdomain of your domain.tld, for instance use proton-bridge.domain.tld to point to your local server hosting Proton Mail Bridge. Finally, you can use your credentials and the server domain name to use Proton Mail on your local network using your generated credentials. For instance, in Nextcloud it would look like this:
+The last thing you'll need to do is add a local DNS record to point to the Proton Mail Bridge server. The benefit of the wildcard certificate is you can name it any subdomain of your domain.tld, for instance use `proton-bridge.domain.tld` to point to your local server hosting Proton Mail Bridge. Or if you have multiple users using your local DNS service, you can name it something random to obscure the nature of it. Finally, you can use your credentials and the server domain name to use Proton Mail on your local network using your generated credentials. For instance, in Nextcloud it would look like this:
 
 ![Nextcloud Email Configuration](/assets/img/posts/2022-05-30-Fixing-ProtonMail-Bridge-SSL-errors-with-Lets-Encrypt/nextcloud-setup.png)
