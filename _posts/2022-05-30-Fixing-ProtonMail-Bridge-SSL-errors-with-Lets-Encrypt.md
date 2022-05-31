@@ -59,7 +59,7 @@ Let's Encrypt is a non-profit certificate authority run by Internet Security Res
 ### Generating Certificates with Let's Encrypt
 First, let's generate our certificates so they are ready to go when we install Proton Mail Bridge. I personally use Cloudflare as my DNS provider which has great support built into Let's Encrypt's `certbot` tool which is the tool we will be using to generate certificates.
 
-We will be generating a wildcard certificate so a DNS entry is not needed in Cloudflare for the subdomain and it will obscure informat for anyone looking at the Let's Encrypt [Certificate Transparency (CT) Logs](https://letsencrypt.org/docs/ct-logs/).
+We will be generating a wildcard certificate so a DNS entry is not needed in Cloudflare for the subdomain and it will obscure information for anyone looking at the Let's Encrypt [Certificate Transparency (CT) Logs](https://letsencrypt.org/docs/ct-logs/).
 
 To do this first create a place to store the certificates in a known place:
 
