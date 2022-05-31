@@ -39,7 +39,7 @@ array (
   ),
 ),
 ```
-{: .nolineno }
+{: .nolineno file="config.php" }
 
 However, I did not want to spend hours digging around for documentation specific to each application to allow self-signed SSL certificates and there is no guarentee that I would even be able to.
 
@@ -73,7 +73,7 @@ Next, for Cloudflare, we need to create a `cloudflare.ini` file (`~/docker/certb
 ```ini
 dns_cloudflare_api_token = ...
 ```
-{: .nolineno }
+{: .nolineno file="cloudflare.ini" }
 
 Then we can go ahead and generate our certificate.
 
@@ -94,7 +94,7 @@ Next we will set up a simple Cron job to renew this certificate every 3 months b
 ```bash
 0 0 1 */3 * docker run -it --rm --name certbot -v "/root/docker/certbot/certs:/etc/letsencrypt" -v "/root/docker/certbot/cloudflare.ini:/cloudflare.ini" certbot/dns-cloudflare certonly --dns-cloudflare --dns-cloudflare-credentials /cloudflare.ini -m changeme@example.com --agree-tos --no-eff-email --dns-cloudflare-propagation-seconds 20 --cert-name 'domain.tld' -d 'domain.tld' -d '*.domain.tld' && docker restart protonmail-bridge
 ```
-{: .nolineno }
+{: .nolineno file="crontab -e" }
 
 ### Installing Proton Mail Bridge
 To install Proton Mail Bridge we will be using Docker. Proton Mail Bridge does not have an official Docker image so [this one](https://hub.docker.com/r/shenxn/protonmail-bridge) by shenxn will be used.
