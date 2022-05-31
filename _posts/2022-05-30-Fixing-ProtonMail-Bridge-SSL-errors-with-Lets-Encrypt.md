@@ -25,7 +25,6 @@ However, many other applications, especially self-hosted ones will throw errors 
 * Uptime Kuma
 * Ghost
 * Bookstack
-* Ghost
 
 At least with Nextcloud I was able to get around this issue by adding these parameters to it's config.php file
 
