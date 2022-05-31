@@ -90,7 +90,7 @@ docker run -it --rm --name certbot -v "/root/docker/certbot/certs:/etc/letsencry
 
 This should generate your wildcard certificate in `/root/docker/certbot/certs/live/domain.tld/` where you'll find the files `README`, `cert.pem`, `chain.pem`, `fullchain.pem`, `privkey.pem`
 
-Next we will set up a simple Cron job to renew this certificate every 3 months by tunning the same command we just ran.
+Next we will set up a simple Cron job to renew this certificate every 3 months by running the same command we just ran and appending the command to restart the Proton Mail Bridge service we'll start below.
 
 ```bash
 0 0 1 */3 * docker run -it --rm --name certbot -v "/root/docker/certbot/certs:/etc/letsencrypt" -v "/root/docker/certbot/cloudflare.ini:/cloudflare.ini" certbot/dns-cloudflare certonly --dns-cloudflare --dns-cloudflare-credentials /cloudflare.ini -m changeme@example.com --agree-tos --no-eff-email --dns-cloudflare-propagation-seconds 20 --cert-name 'domain.tld' -d 'domain.tld' -d '*.domain.tld' && docker restart protonmail-bridge
