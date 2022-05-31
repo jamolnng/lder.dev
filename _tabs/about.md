@@ -65,7 +65,9 @@ Type|Item|Price
 **Motherboard** | [Gigabyte GA-Z97X-GAMING 7 ATX LGA1150 Motherboard](https://pcpartpicker.com/product/NwGkcf/gigabyte-motherboard-gaz97xgaming7) |-
 **Memory** | [Corsair Vengeance Pro 16 GB (2 x 8 GB) DDR3-2400 CL11 Memory](https://pcpartpicker.com/product/NwR48d/corsair-memory-cmy16gx3m2a2400c11r) |-
 **Storage** | [Samsung 850 Evo 250 GB 2.5" Solid State Drive](https://pcpartpicker.com/product/3kL7YJ/samsung-internal-hard-drive-mz75e250bam) |-
-**Storage** | [Western Digital Black 2 TB 3.5" 7200RPM Internal Hard Drive](https://pcpartpicker.com/product/XtjG3C/western-digital-internal-hard-drive-wd2003fzex) |-
+**Storage** | [Western Digital Blue 4 TB 3.5" 5600RPM Internal Hard Drive](https://pcpartpicker.com/product/9wVmP6/western-digital-wd-blue-4-tb-35-5400rpm-internal-hard-drive-wd40ezaz) |-
+**Storage** | [Western Digital Blue 4 TB 3.5" 5600RPM Internal Hard Drive](https://pcpartpicker.com/product/9wVmP6/western-digital-wd-blue-4-tb-35-5400rpm-internal-hard-drive-wd40ezaz) |-
+**Storage** | [Western Digital Blue 4 TB 3.5" 5600RPM Internal Hard Drive](https://pcpartpicker.com/product/9wVmP6/western-digital-wd-blue-4-tb-35-5400rpm-internal-hard-drive-wd40ezaz) |-
 **Video Card** | [MSI GeForce GTX 980 Ti 6 GB GAMING Video Card](https://pcpartpicker.com/product/MBbkcf/msi-video-card-gtx980tigaming6g) |-
 **Case** | [NZXT S340 ATX Mid Tower Case](https://pcpartpicker.com/product/ms6BD3/nzxt-case-cas340wb1) |-
 **Power Supply** | [Corsair AX 760 W 80+ Platinum Certified Fully Modular ATX PSU](https://pcpartpicker.com/product/Yhbp99/corsair-power-supply-ax760) |-
