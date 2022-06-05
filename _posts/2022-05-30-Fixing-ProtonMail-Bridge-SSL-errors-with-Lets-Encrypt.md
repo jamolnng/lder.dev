@@ -1,7 +1,7 @@
 ---
 title: Fixing ProtonMail Bridge SSL errors with Let's Encrypt
 date: 2022-05-30 13:00:00 -600
-categories: [software]
+categories: [software, homelab]
 tags: [proton, ssl, email, docker]
 ---
 
