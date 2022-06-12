@@ -16,6 +16,7 @@ steps:
     restore: true
     mount:
     - vendor
+  ttl: 7
 
 - name: build
   image: ruby:3.0
