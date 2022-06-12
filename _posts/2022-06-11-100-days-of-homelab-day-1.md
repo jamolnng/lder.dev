@@ -28,7 +28,7 @@ The challenge is to spend at least an hour for the next 100 days learning or wor
   Day 1: Deployment workflow: Valheim Server
   </summary>
   <div markdown="1">
-  Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there
+  Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there. However, since then I have [significantly upgraded]({{ site.url }}/about/#vmlxcdocker-machine) my home lab
   Setting up a Valheim server with Docker in an LXC container in Proxmox. It's container-inception.
   </div>
 </details>
