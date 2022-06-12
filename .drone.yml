@@ -65,10 +65,11 @@ name: deploy
 
 steps:
 - name: deploy
-  image: debian
-  commands:
-  - apt install curl -y
-  - curl -X 'POST' 'https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync' -H 'accept: application/json' -d ''
+  image: plugins/webhook
+  settings:
+    urls: https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
+    method: POST
+    content_type: application/json
 
 trigger:
   event:
