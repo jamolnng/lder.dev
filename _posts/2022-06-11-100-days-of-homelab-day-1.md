@@ -1,6 +1,6 @@
 ---
 title: "#100DaysOfHomeLab: Day 1"
-date: 2022-06-04 13:00:00 -600
+date: 2022-06-11 13:00:00 -600
 categories: [homelab, 100-days]
 tags: [unRAID]
 pin: true
