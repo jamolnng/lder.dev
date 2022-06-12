@@ -35,6 +35,22 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 </details>
 -->
 
+```mermaid
+flowchart LR
+
+    A[Proxmox] --> B1["LXC (valheim.domain.tld)"]
+    A[Proxmox] --> B2["LXC (gitea.domain.tld)"]
+    A[Proxmox] --> B3["LXC (...)"]
+    B1 --> C1[Docker Compose]
+    C1 --> D1[gitea]
+    C1 --> E1[gotea_db]
+    B2 --> C2[Docker Compose]
+    C2 --> D2[valheim]
+    B3 --> C3[Docker Compose]
+    C3 --> D3[...]
+    C3 --> E3[...]
+```
+
 {% for day in site.one_hundred_days reversed %}
 {% if forloop.first %}
 <details open markdown=block>
