@@ -14,7 +14,16 @@ The challenge is to spend at least an hour for the next 100 days learning or wor
 
 <details open>
   <summary style="font-size:14pt;font-weight:bold;">
-  Day 3: Deployment workflow: Valheim Server
+  Day 2: CI with Drone CI and Gitea
+  </summary>
+  <div markdown="1">
+  # TODO
+  </div>
+</details>
+
+<details>
+  <summary style="font-size:14pt;font-weight:bold;">
+  Day 1: Deployment workflow: Valheim Server
   </summary>
   <div markdown="1">
   Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there
