@@ -5,7 +5,6 @@ categories: [homelab, 100-days]
 tags: [software, docker, proxmox]
 pin: true
 mermaid: true
-img_path: /assets/img/posts/2022-100-days-of-homelab/
 ---
 
 In one of his recent YouTube video, TechnoTim has challeneged all of us Homelabbers to the #100DaysOfHomeLab
