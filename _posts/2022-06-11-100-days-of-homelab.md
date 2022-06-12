@@ -84,5 +84,11 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 
   ![Proxmox Container DNS Tab](day1/proxmox-create-ct-confirm.png)
   * Finally, set it to start after creating and click confirm
+
+  Next, log into the container and I've created a simple install script for myself that installs updates, zsh, oh-my-zsh, and docker
+
+  ```shell
+  apt update && apt upgrade -y && apt install curl zsh git -y && sh -c "$(curl -fsSL https://get.docker.com)" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+  ```
   </div>
 </details>
