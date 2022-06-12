@@ -50,9 +50,6 @@ steps:
 trigger:
   branch:
   - main
-  event:
-    include:
-    - push
 
 volumes:
 - name: cache
