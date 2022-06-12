@@ -35,7 +35,7 @@ steps:
     mount:
     - vendor
 
-- name: deploy
+- name: stage
   image: appleboy/drone-scp
   settings:
     host: ssh.staging.lder.dev
@@ -66,15 +66,12 @@ name: deploy
 steps:
 - name: deploy
   image: plugins/webhook
-  environment:
-    GITEA_TOKEN:
-      from_secret: gitea_token
   settings:
-    urls:
-      - https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
+    urls: https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
     method: POST
     headers:
-      - "Authorization: token ${GITEA_TOKEN}"
+      Authorization:
+        from_secret: gitea_token
 
 trigger:
   event:
