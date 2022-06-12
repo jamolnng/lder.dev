@@ -23,6 +23,7 @@ steps:
     - bundle config set --local deployment 'true'
     - bundle install
     - JEKYLL_ENV=production bundle exec jekyll build
+    - cd _site/
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
@@ -36,8 +37,6 @@ steps:
 
 - name: deploy
   image: appleboy/drone-scp
-  commands:
-     - cd _site/
   settings:
     host: ssh.staging.lder.dev
     username: 
