@@ -54,7 +54,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
     C --> E[app_db]
   ```
   
-  While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier, instead of having to roll back everything if something goes wrong. All of this at essentially an unnoticable cost to performance.
+  While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier. Instead of having to roll back everything if something goes wrong, I can just pick whichever stack I messed up. All of this at essentially an unnoticable cost to performance.
 
   To start, I need to spin up a new LXC container. This is pretty easy in Proxmox.
 
@@ -63,5 +63,26 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   * A hostname: valheim.domain.tld, this can really be whatever, but giving it the domain you will access it with helps me for organization
   * Deselect "Unprivileged container" this will allow us later to let the Valheim server get more CPU cycles so it feels smoother
   * Finally give it a password
+
+  ![Proxmox Container Template Tab](day1/proxmox-create-ct-template.png)
+  * Here I'm choosing a Debian 11.3-1 template from local storage
+
+  ![Proxmox Container Disks Tab](day1/proxmox-create-ct-disks.png)
+  * Allocate some storage for it. I found that 8GB is enough but 12GB gives some head room for growth
+
+  ![Proxmox Container Disks Tab](day1/proxmox-create-ct-cpu.png)
+  * I've given my container 6 vCores on my Intel 12400, however even with a few people on it I've not managed more than 10% CPU usage
+
+  ![Proxmox Container Memory Tab](day1/proxmox-create-ct-memory.png)
+  * 8GB RAM is more than enough, at idle it only uses 2.5GB and it barely goes up as people join
+
+  ![Proxmox Container Network Tab](day1/proxmox-create-ct-network.png)
+  * I've selected to use DHCP to get the IP address for this container, I like to set the static routes in my DHCP server (in my case my OPNsense router) to stay organized
+
+  ![Proxmox Container DNS Tab](day1/proxmox-create-ct-dns.png)
+  * I ignore the DNS tab because I let my DHCP server provide the DNS details the the container
+
+  ![Proxmox Container DNS Tab](day1/proxmox-create-ct-confirm.png)
+  * Finally, set it to start after creating and click confirm
   </div>
 </details>
