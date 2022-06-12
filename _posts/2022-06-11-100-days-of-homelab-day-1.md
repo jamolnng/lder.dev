@@ -21,23 +21,3 @@ The challenge is to spend at least an hour for the next 100 days learning or wor
   Setting up a Valheim server with Docker in an LXC container in Proxmox. It's container-inception.
   </div>
 </details>
-
-<details>
-  <summary style="font-size:14pt;font-weight:bold;">
-  Day 2: Deployment workflow: Valheim Server
-  </summary>
-  <div markdown="1">
-  Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there
-  Setting up a Valheim server with Docker in an LXC container in Proxmox. It's container-inception.
-  </div>
-</details>
-
-<details>
-  <summary style="font-size:14pt;font-weight:bold;">
-  Day 1: Deployment workflow: Valheim Server
-  </summary>
-  <div markdown="1">
-  Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there
-  Setting up a Valheim server with Docker in an LXC container in Proxmox. It's container-inception.
-  </div>
-</details>
