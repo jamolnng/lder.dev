@@ -31,7 +31,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 <details markdown=block>
 
 {% endif %}
-<summary style="font-size:24pt;font-weight:bold;">{{ day.title }}</summary>
+<summary style="font-size:1.9rem;font-weight:400;">{{ day.title }}</summary>
 # {{ day.title }}
 {{ day.content | markdownify }}
 
