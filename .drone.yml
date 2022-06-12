@@ -62,7 +62,6 @@ branches: main
 kind: pipeline
 type: docker
 name: deploy
-
 steps:
 - name: deploy
   image: plugins/webhook
@@ -70,14 +69,9 @@ steps:
     urls: https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
     method: POST
     content_type: application/json
-    headers:
-      Authorization:
-        from_secret: gitea_token
-
 trigger:
   event:
   - promote
   target:
   - production
-
 branches: main
