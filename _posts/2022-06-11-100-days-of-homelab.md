@@ -10,7 +10,7 @@ img_path: /assets/img/posts/2022-100-days-of-homelab/
 
 {% assign random = site.time | date: "%s%N" %}
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js?{{ random }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.js?{{ random }}"></script>
 
 In one of his recent YouTube video, TechnoTim has challeneged all of us Homelabbers to the #100DaysOfHomeLab
 
