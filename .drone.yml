@@ -1,0 +1,61 @@
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    restore: true
+    mount:
+    - vendor
+
+- name: build
+  image: ruby:3.0
+  commands:
+    - bundle config set --local deployment 'true'
+    - bundle install
+    - JEKYLL_ENV=production bundle exec jekyll build
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache 
+  volumes:
+  - name: cache
+    path: /cache
+  settings:
+    rebuild: true
+    mount:
+    - vendor
+
+- name: deploy
+  image: appleboy/drone-scp
+  settings:
+    host: ssh.staging.lder.dev
+    username: 
+      from_secret: staging_username
+    password: 
+      from_secret: staging_password
+    port: 22
+    target: /var/www/html/
+    source: _site/
+
+trigger:
+  branch:
+  - main
+  event:
+    include:
+    - push
+
+volumes:
+- name: cache
+  host:
+    path: /var/lib/drone/temp
+
+branches: main
