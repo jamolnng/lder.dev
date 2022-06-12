@@ -53,7 +53,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
       A[Proxmox] --> B3["LXC (...)"]
       B1 --> C1[Docker Compose]
       C1 --> D1[gitea]
-      C1 --> E1[gotea_db]
+      C1 --> E1[gitea_db]
       B2 --> C2[Docker Compose]
       C2 --> D2[valheim]
       B3 --> C3[Docker Compose]
@@ -63,6 +63,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   
   While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier. Instead of having to roll back everything if something goes wrong, I can just pick whichever stack I messed up. All of this at essentially an unnoticable cost to performance.
 
+  ## Proxmox
   To start, I need to spin up a new LXC container. This is pretty easy in Proxmox.
 
   ![Proxmox Container General Tab](day1/proxmox-create-ct-general.png)
@@ -94,6 +95,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 
   Next, log into the container and I've created a simple install script for myself that installs updates, zsh, oh-my-zsh, and docker
 
+  ## Install zsh and docker
   ```shell
   apt update && apt upgrade -y && apt install curl zsh git -y && sh -c "$(curl -fsSL https://get.docker.com)" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
   ```
