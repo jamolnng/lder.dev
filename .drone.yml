@@ -70,7 +70,8 @@ steps:
     GITEA_TOKEN:
       from_secret: gitea_token
   settings:
-    urls: https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
+    urls:
+      - https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
     method: POST
     headers:
       - "Authorization: token ${GITEA_TOKEN}"
