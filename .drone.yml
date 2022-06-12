@@ -23,7 +23,7 @@ steps:
   commands:
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=production bundle exec jekyll build
+    - JEKYLL_ENV=production bundle exec jekyll build --verbose
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
