@@ -23,7 +23,7 @@ The challenge is to spend at least an hour for the next 100 days learning or wor
 </details>
 -->
 
-<details>
+<details open>
   <summary style="font-size:14pt;font-weight:bold;">
   Day 1: Deployment workflow: Valheim Server
   </summary>
