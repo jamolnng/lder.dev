@@ -134,6 +134,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  100days:
+    output: true
+    sort_by: order
 
 defaults:
   - scope:
