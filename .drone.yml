@@ -45,7 +45,7 @@ steps:
       from_secret: staging_password
     port: 22
     target: /var/www/html/${DRONE_REPO}/
-    source: _site/
+    source: _site
 
 trigger:
   branch:
