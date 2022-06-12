@@ -57,3 +57,23 @@ volumes:
     path: /var/lib/drone/temp
 
 branches: main
+
+---
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+- name: deploy
+  image: debian
+  commands:
+  - apt install curl -y
+  - curl -X 'POST' 'https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync' -H 'accept: application/json' -d ''
+
+trigger:
+  event:
+  - promote
+  target:
+  - production
+
+branches: main
