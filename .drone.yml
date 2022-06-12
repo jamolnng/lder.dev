@@ -69,7 +69,7 @@ steps:
     GITEA_TOKEN:
       from_secret: gitea_token
   settings:
-    urls: https://git.lder.dev/api/v1/repos/${DRONE_REPO}/mirror-sync?token=$${GITEA_TOKEN}
+    urls: https://git.lder.dev/api/v1/repos/${DRONE_REPO}/mirror-sync?token=${GITEA_TOKEN}
     method: POST
     content_type: application/json
 trigger:
