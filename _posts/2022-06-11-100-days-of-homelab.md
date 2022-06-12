@@ -48,18 +48,17 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   
   ```mermaid
   flowchart LR
-    A[Proxmox] --> B1[LXC (valheim)]
-    A[Proxmox] --> B2[LXC (gitea)]
-    A[Proxmox] --> B3[...]
-    B1 --> C1[Docker Compose]
-    C1 --> D1[app]
-    C1 --> E1[app_db]
-    B2 --> C2[Docker Compose]
-    C2 --> D2[app]
-    C2 --> E2[app_db]
-    B3 --> C3[Docker Compose]
-    C3 --> D3[app]
-    C3 --> E3[app_db]
+      A[Proxmox] --> B1["LXC (valheim.domain.tld)"]
+      A[Proxmox] --> B2["LXC (gitea.domain.tld)"]
+      A[Proxmox] --> B3["LXC (...)"]
+      B1 --> C1[Docker Compose]
+      C1 --> D1[gitea]
+      C1 --> E1[gotea_db]
+      B2 --> C2[Docker Compose]
+      C2 --> D2[valheim]
+      B3 --> C3[Docker Compose]
+      C3 --> D3[...]
+      C3 --> E3[...]
   ```
   
   While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier. Instead of having to roll back everything if something goes wrong, I can just pick whichever stack I messed up. All of this at essentially an unnoticable cost to performance.
