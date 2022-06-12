@@ -134,7 +134,7 @@ collections:
   tabs:
     output: true
     sort_by: order
-  100days:
+  one_hundred_days:
     output: true
     sort_by: order
 
