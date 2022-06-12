@@ -72,7 +72,7 @@ steps:
   settings:
     urls: https://git.lder.dev/api/v1/repos/jesse/lder.dev/mirror-sync
     method: POST
-    headers: [ "Authorization: token ${GITEA_TOKEN}" ]
+    headers: "Authorization: token ${GITEA_TOKEN}"
 
 trigger:
   event:
