@@ -27,10 +27,15 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 {% for day in site.one_hundred_days reversed %}
 {% if forloop.first %}
 <details open markdown=block>
+
 {% else %}
 <details markdown=block>
+
 {% endif %}
 <summary style="font-size:14pt;font-weight:bold;">{{ day.title }}</summary>
+
 {{ day.content | markdownify }}
+
 </details>
+
 {% endfor %}
