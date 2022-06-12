@@ -1,5 +1,5 @@
 ---
-title: "#100DaysOfHomeLab: Rolling Release Day 2"
+title: "#100DaysOfHomeLab: Rolling Release"
 date: 2022-06-11 12:00:00 -600
 categories: [homelab, 100-days-of-homelab]
 tags: [software, docker, proxmox]
@@ -28,10 +28,10 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   <details markdown=block>
   <summary style="font-size:1.9rem;font-weight:400;">{{ post.title }}</summary>
 
-  # {{ post.title }}
+# {{ post.title }}
 
   {{ post.content | markdownify }}
-  
+
   </details>
   {% endif %}
 {% endfor %}
