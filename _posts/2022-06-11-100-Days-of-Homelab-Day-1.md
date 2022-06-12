@@ -2,7 +2,7 @@
 title: "Day 1: Deployment workflow: Valheim Server"
 date: 2022-06-11 13:00:00 -600
 categories: [homelab, 100-days-of-homelab]
-tags: [software, docker, proxmox]
+tags: [software, docker, proxmox, games]
 mermaid: true
 ---
 

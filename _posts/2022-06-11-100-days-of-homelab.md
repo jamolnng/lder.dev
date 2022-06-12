@@ -2,7 +2,7 @@
 title: "#100DaysOfHomeLab: Rolling Release"
 date: 2022-06-11 12:00:00 -600
 categories: [homelab, 100-days-of-homelab]
-tags: [software, docker, proxmox]
+tags: [software, networking]
 pin: true
 mermaid: true
 ---
