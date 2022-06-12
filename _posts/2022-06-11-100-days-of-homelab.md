@@ -1,5 +1,5 @@
 ---
-title: "#100DaysOfHomeLab: Rolling Release Day 1"
+title: "#100DaysOfHomeLab: Rolling Release Day 2"
 date: 2022-06-11 12:00:00 -600
 categories: [homelab, 100-days]
 tags: [software, docker, proxmox]
