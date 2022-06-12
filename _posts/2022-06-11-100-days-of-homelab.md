@@ -35,11 +35,10 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 </details>
 -->
 
-<details open>
+<details open markdown=block>
   <summary style="font-size:14pt;font-weight:bold;">
   Day 1: Deployment workflow: Valheim Server
   </summary>
-  <div markdown=block>
   Recently some of my old friends and I started getting back into [Valheim](https://store.steampowered.com/app/892970/Valheim/). Last time we did this we rented out a server from one of the many server providers out there. However, as we've noticed, these servers are prone to really underperforming their listed specs. Since then I have [significantly upgraded]({{ 'about' | relative_url }}/#servers) my home lab from a lonely little Raspberry Pi 3B+.
 
   While setting up a Valheim server in itself is not that difficult, especially with the help of docker, until now I've really just been setting up my workflow and this is a chance for me to test it all out.
@@ -101,5 +100,4 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   ```shell
   apt update && apt upgrade -y && apt install curl zsh git -y && sh -c "$(curl -fsSL https://get.docker.com)" && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
   ```
-  </div>
 </details>
