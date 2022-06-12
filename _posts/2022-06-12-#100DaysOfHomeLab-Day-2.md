@@ -3,7 +3,6 @@ title: "Day 2: CI with Drone CI and Gitea"
 date: 2022-06-12 6:00:00 -600
 categories: [homelab, 100-days-of-homelab]
 tags: [software, docker, proxmox]
-pin: true
 mermaid: true
 ---
 
