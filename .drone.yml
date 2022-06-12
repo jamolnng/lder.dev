@@ -72,7 +72,7 @@ steps:
     urls: https://git.lder.dev/api/v1/repos/${DRONE_REPO}/mirror-sync?token=${GITEA_TOKEN}
     method: POST
     content_type: application/json
-    headers: ["Authorization: token $${GITEA_TOKEN}"]
+    headers: { Authorization: token }
 trigger:
   event:
   - promote
