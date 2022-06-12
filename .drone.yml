@@ -64,15 +64,16 @@ type: docker
 name: deploy
 steps:
 - name: deploy
+  secrets:
+    - source: gitea_token
+      target: webhook_password
   image: plugins/webhook
-  environment:
-    GITEA_TOKEN:
-      from_secret: gitea_token
+  username: jesse
   settings:
-    urls: https://git.lder.dev/api/v1/repos/${DRONE_REPO}/mirror-sync?token=${GITEA_TOKEN}
+    urls: https://git.lder.dev/api/v1/repos/${DRONE_REPO}/mirror-sync
     method: POST
     content_type: application/json
-    headers: { Authorization: token }
+    debug: true
 trigger:
   event:
   - promote
