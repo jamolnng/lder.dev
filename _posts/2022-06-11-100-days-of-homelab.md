@@ -24,12 +24,11 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 -->
 
 {% for post in site.categories["100-days-of-homelab"] reversed %}
-  {% if post.title != %}
+  {% if post.title != page.title %}
   <details markdown=block>
   <summary style="font-size:1.9rem;font-weight:400;">{{ day.title }}</summary>
-  # {{ day.title }}
-  {{ day.content | markdownify }}
-
+  # {{ post.title }}
+  {{ post.content | markdownify }}
   </details>
   {% endif %}
 {% endfor %}
