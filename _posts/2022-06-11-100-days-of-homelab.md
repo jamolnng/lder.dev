@@ -47,7 +47,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   Now the way I have things currently set up on my main server is that I run LXC containers with Docker running inside these containers for a bit of container-inception. I learned this little technique from a recent [DBTech video](https://www.youtube.com/watch?v=ksvoWpyWHUY).
   
   ```mermaid
-  graph TD
+  flowchart LR
     A[Proxmox] --> B[LXC]
     B --> C{Docker Compose}
     C --> D[app]
