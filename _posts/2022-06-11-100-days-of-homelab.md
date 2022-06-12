@@ -8,7 +8,7 @@ mermaid: true
 img_path: /assets/img/posts/2022-100-days-of-homelab/
 ---
 
-{% assign random = site.time | date: "%s%N" | modulo: site.data.inspirational-quotes.size %}
+{% assign random = site.time | date: "%s%N" | modulo: site.one_hundred_days.size %}
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js?{{ random }}"></script>
 
