@@ -44,7 +44,17 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 
   While setting up a Valheim server in itself is not that difficult, especially with the help of docker, until now I've really just been setting up my workflow and this is a chance for me to test it all out.
 
-  Now the way I have things currently set up on my main server is that I run LXC containers with Docker running inside these containers for a bit of container-inception. I learned this little technique from a recent [DBTech video](https://www.youtube.com/watch?v=ksvoWpyWHUY). While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier, instead of having to roll back everything if something goes wrong. All of this at essentially an unnoticable cost to performance.
+  Now the way I have things currently set up on my main server is that I run LXC containers with Docker running inside these containers for a bit of container-inception. I learned this little technique from a recent [DBTech video](https://www.youtube.com/watch?v=ksvoWpyWHUY).
+  
+  ```mermaid
+  graph TD
+    A[Proxmox] --> B[LXC]
+    B --> C{Docker Compose}
+    C --> D[app]
+    C --> E[app_db]
+  ```
+  
+  While options like [Portainer](https://www.portainer.io/) stacks exist for organization, having each "stack" on it's own LXC container makes backuping up and restoring each stack individually a whole lot easier, instead of having to roll back everything if something goes wrong. All of this at essentially an unnoticable cost to performance.
 
   To start, I need to spin up a new LXC container. This is pretty easy in Proxmox.
 
