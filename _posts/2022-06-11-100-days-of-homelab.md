@@ -49,6 +49,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
   ```mermaid
   flowchart LR
     A[Proxmox] --> B[LXC]
+    A[Proxmox] --> B[LXC]
     B --> C[Docker Compose]
     C --> D[app]
     C --> E[app_db]
