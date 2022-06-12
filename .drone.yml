@@ -36,6 +36,8 @@ steps:
 
 - name: deploy
   image: appleboy/drone-scp
+  commands:
+     - cd _site/
   settings:
     host: ssh.staging.lder.dev
     username: 
@@ -44,7 +46,7 @@ steps:
       from_secret: staging_password
     port: 22
     target: /var/www/html/${DRONE_REPO}
-    source: _site/*
+    source: /
 
 trigger:
   branch:
