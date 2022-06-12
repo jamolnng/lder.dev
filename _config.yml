@@ -134,9 +134,6 @@ collections:
   tabs:
     output: true
     sort_by: order
-  one_hundred_days:
-    output: true
-    sort_by: order
 
 defaults:
   - scope:
