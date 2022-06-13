@@ -24,7 +24,7 @@ steps:
     - echo "" > ./_includes/umami.html
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=production bundle exec jekyll build --verbose
+    - JEKYLL_ENV=development bundle exec jekyll build --verbose
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
