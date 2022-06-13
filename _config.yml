@@ -21,7 +21,7 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: lder.dev                          # the main title
+title: jesse/lder.dev                          # the main title
 
 tagline: documentation for small projects of mine   # it will display as the sub-title
 
