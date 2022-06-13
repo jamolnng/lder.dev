@@ -21,8 +21,7 @@ steps:
 - name: build
   image: ruby:3.0
   commands:
-    - echo "\nexclude:\n  - ./_includes/head.html" >> ./_config.yml
-    - cat ./_config.yml
+    - echo "" > ./_includes/umami.html
     - bundle config set --local deployment 'true'
     - bundle install
     - JEKYLL_ENV=production bundle exec jekyll build --verbose
