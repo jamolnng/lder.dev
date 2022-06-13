@@ -24,9 +24,10 @@ steps:
     - echo "" > ./_includes/umami.html
     - "echo \"url: 'staging.lder.dev'\" > ./_config_dev.yml"
     - "echo \"sitebase: '/${DRONE_REPO}'\" >> ./_config_dev.yml"
+    - "echo \"title: '${DRONE_REPO}'\" >> ./_config_dev.yml"
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config_dev.yml,_config.yml
+    - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
