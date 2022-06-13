@@ -23,6 +23,7 @@ steps:
   commands:
     - echo "" > ./_includes/umami.html
     - echo "url:'staging.lder.dev' sitebase:'/${DRONE_REPO}'" > ./_config_dev.yml
+    - pwd
     - cat ./_config_dev.yml
     - bundle config set --local deployment 'true'
     - bundle install
