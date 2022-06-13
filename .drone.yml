@@ -27,7 +27,7 @@ steps:
     - cat ./_config_dev.yml
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=development bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
+    - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
