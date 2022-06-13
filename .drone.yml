@@ -22,8 +22,8 @@ steps:
   image: ruby:3.0
   commands:
     - echo "" > ./_includes/umami.html
-    - echo 'url: staging.lder.dev' > ./_config_dev.yml
-    - echo 'baseurl: \'/${DRONE_REPO}\'' >> ./_config_dev.yml
+    - echo "url:\"staging.lder.dev\"" > ./_config_dev.yml
+    - echo "baseurl:\'/${DRONE_REPO}\'" >> ./_config_dev.yml
     - cat ./_config_dev.yml
     - bundle config set --local deployment 'true'
     - bundle install
