@@ -22,9 +22,10 @@ steps:
   image: ruby:3.0
   commands:
     - echo "" > ./_includes/umami.html
+    - echo "url: staging.lder.dev\nbaseurl: \"/${DRONE_REPO}\"" > ./_config_dev.yml
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=development bundle exec jekyll build --verbose
+    - JEKYLL_ENV=development bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
