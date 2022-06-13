@@ -26,7 +26,7 @@ steps:
     - "echo \"sitebase: '/${DRONE_REPO}'\" >> ./_config_dev.yml"
     - bundle config set --local deployment 'true'
     - bundle install
-    - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
+    - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config_dev.yml,_config.yml
 
 - name: rebuild-cache
   image: drillster/drone-volume-cache 
