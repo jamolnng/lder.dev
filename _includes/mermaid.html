@@ -2,9 +2,9 @@
   mermaid-js loader
 -->
 
-<script src="{{ site.data.assets[origin].mermaid.js }}" defer></script>
+<!-- <script src="{{ site.data.assets[origin].mermaid.js }}"></script> -->
 
-<script defer>
+<script src="{{ site.data.assets[origin].mermaid.js }}" defer>
   $(function() {
     function updateMermaid(event) {
       if (event.source === window && event.data &&
