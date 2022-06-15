@@ -45,4 +45,4 @@ However, the issue I ran into was one with my Aruba S2500 switch. I thought I ha
 
 As of June 14th, the day after, I did actually get VLANs working, at least I think I did. The solution was setting the uplink port (the one that connects to my router) on my Aruba switch to a *trunk port* allowing my VLANs to pass through. To any network admins this probably seems trivial, but at the time for me this was a complete mystery.
 
-And now they work. Currently, I only have the Wi-Fi users separated into VLANs but I'm slowly working on trying to get the wired connections set up along with a "blackhole" vlan on my switches that basically disables the ports.
+And now they work. Currently, I only have the Wi-Fi users separated into VLANs but I'm slowly working on trying to get the wired connections set up along with a "blackhole" vlan on my switches that basically disables the unused ports.
