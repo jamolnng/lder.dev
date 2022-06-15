@@ -29,6 +29,8 @@ flowchart LR
     B --> H[Roommate's PC]
 
 ```
+> If this isn't rendering right it's because there has been an ongoing issue with Mermaid.JS
+{: .prompt-info }
 
 Initially, I had all of these devices on the same network, which for a home network is acceptable but not great. So I finally decided to logically separate my network via VLANs.
 
