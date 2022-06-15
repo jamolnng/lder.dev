@@ -11,15 +11,23 @@ At the beginning of this week I only had a vague idea of what VLANs were, in fac
 My basic network setup looks vaguely something like this:
 
 ```mermaid
+
 flowchart LR
 
     A[OPNsense] --> B[Aruba S2500-48P]
+
     B --> C[U6-Pro-US]
+
     C --> E1[Wi-Fi Devices]
+
     B --> D[TL-SG108E]
+
     D --> F[My stuff]
+
     B --> G[Servers]
+
     B --> H[Roommate's PC]
+
 ```
 
 Initially, I had all of these devices on the same network, which for a home network is acceptable but not great. So I finally decided to logically separate my network via VLANs.
