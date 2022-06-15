@@ -45,8 +45,8 @@ In OPNsense this way pretty easy to set up and I'd really like to thank Mactelec
 
 However, the issue I ran into was one with my Aruba S2500 switch. I thought I had tried everything. I set up VLANs in the WebUI, I set them up in the command line interface. But every time I tried to enable them I just ended up locking myself out and I couldn't figure out why so I had to give up.
 
-### Update (June 14th, 2022)
+### Update (June 14th, 2022, Day 4)
 
-As of June 14th, the day after, I did actually get VLANs working, at least I think I did. The solution was setting the uplink port (the one that connects to my router) on my Aruba switch to a *trunk port* allowing my VLANs to pass through. To any network admins this probably seems trivial, but at the time for me this was a complete mystery.
+As of June 14th, 2022, day 4 of #100DaysOfHomeLab, I did actually get VLANs working, at least I think I did. The solution was setting the uplink port (the one that connects to my router) on my Aruba switch to a *trunk port* allowing my VLANs to pass through. To any network admins this probably seems trivial, but at the time for me this was a complete mystery.
 
 And now they work. Currently, I only have the Wi-Fi users separated into VLANs but I'm slowly working on trying to get the wired connections set up along with a "blackhole" vlan on my switches that basically disables the unused ports.
