@@ -1,6 +1,6 @@
 ---
 title: "Day 5: Setting up Uptime-Kuma and Traefik on a VPS"
-date: 2022-06-14 12:00:00 -600
+date: 2022-06-15 12:00:00 -600
 categories: [homelab, 100-days-of-homelab]
 tags: [traefik, vps, proxy, uptime-kuma]
 mermaid: true
