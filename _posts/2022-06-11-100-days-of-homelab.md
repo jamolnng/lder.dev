@@ -27,7 +27,7 @@ The challenge is to commit at least 1 hour for the next 100 days learning or wor
 {% for post in site.categories["100-days-of-homelab"] %}
   {% if post.title != page.title %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </li>
   {% endif %}
 {% endfor %}
