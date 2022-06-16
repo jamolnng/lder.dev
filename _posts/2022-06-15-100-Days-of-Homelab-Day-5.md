@@ -6,7 +6,7 @@ tags: [traefik, vps, proxy, uptime-kuma]
 mermaid: true
 ---
 
-While a VPS isn't necessarily part of your Homelab, it can be a useful tool to manage and monitor your home lab. Whether we like to admit it or not, residential internet doesn't have the uptime and reliability of that of commercial datacenteres. I figured to give 1 month a try and set up Uptime-Kuma with a Traefik reverse proxy. This also gave me the opportunity to learn Traefik since on my home network I use HAProxy as my reverse proxy.
+While a VPS isn't necessarily part of your Homelab, it can be a useful tool to manage and monitor your home lab. Whether we like to admit it or not, residential internet doesn't have the uptime and reliability of that of commercial datacenters. I figured to give 1 month a try and set up Uptime-Kuma with a Traefik reverse proxy. This also gave me the opportunity to learn Traefik since on my home network I use HAProxy as my reverse proxy.
 
 ## VPS
 VPS, or virtual private server, is a cloud hosted, virtualized, server which you can purchase for typically some form of time increment. The pricing varies based on the specs of the server. For my VPS I went with a 1 vCPU and 1GB ram one from https://buyvm.net. ~~It has generally been okay~~ [Check my note about them below](#note-about-buyvmnet), but in my experience has some issues with SSH disconnecting randomly. For my operating system I chose Debian 11.
@@ -23,7 +23,7 @@ apt update && apt upgrade -y && apt install curl zsh git -y && sh -c "$(curl -fs
 ## Traefik
 Traefik is a edge-router and reverse proxy to make it easy to publish your services to the web. One of it's main benefits is how easily it integrates into Kubernetes, Docker, AWS, etc. A striped down example of my `docker-compose.yml` and required config files for Traefik can be found [here](https://git.lder.dev/jesse/homelab/src/branch/master/docker-compose/traefik).
 
-It's as easy as running `docker compose up -d` to get Traefik basics up and running. Then to add services to Traefik
+It's as easy as running `docker compose up -d` to get Traefik basics up and running. Then to add services to Traefik it's as easy as adding a handful of labels to your services `docker-compose.yml`.
 
 ## Uptime-Kuma
 [Uptime-Kuma](https://github.com/louislam/uptime-kuma), as I talked about in my [first #100DaysOfHomeLab post]({% post_url 2022-06-11-100-Days-of-Homelab-Day-1 %}), is a self-hosted monitoring tool. The instance I run in my homelab works great, however, if the internet in my homelab were to ever go down, it wouldn't be able to notify me. Having a second instance hosted on a VPS outside my network allows for me to easily have some redundancy in my monitoring tools.
