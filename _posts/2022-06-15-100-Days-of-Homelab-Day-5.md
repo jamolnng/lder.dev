@@ -81,3 +81,5 @@ Here are ping histories of my two Github Pages websites, so not self-hosted, ens
 
 
 ![Github pages 2](/assets/img/posts/2022-100-days-of-homelab/day005/github-pages-2.png)
+
+So maybe they're not going to sleep, but they are definitely having their own network problems.
