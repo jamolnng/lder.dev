@@ -57,7 +57,7 @@ services:
 {: file="docker-compose.yml" }
 
 I've organized all of my homelab stuff on one `Shelf` and within that I have `Books` dedicated to `Hardawre` (servers, routers, switches, access points), `Network` (vlan set up, IP tables), and `Services` (adguard, valhiem, bookstack, etc).
-&nbsp; | &nbsp;
+test | test
 :-:|:-:
 ![Bookstack Homelab Shelf](/assets/img/posts/2022-100-days-of-homelab/day007/bookstack-homelab.png) | ![Bookstack Hardware Book](/assets/img/posts/2022-100-days-of-homelab/day007/bookstack-homelab-hardware.png)
 ![Bookstack Network Book](/assets/img/posts/2022-100-days-of-homelab/day007/bookstack-homelab-network.png) | ![Bookstack Services Book](/assets/img/posts/2022-100-days-of-homelab/day007/bookstack-homelab-services.png)
