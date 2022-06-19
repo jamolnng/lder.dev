@@ -21,7 +21,7 @@ apt update && apt upgrade -y && apt install curl zsh git -y && sh -c "$(curl -fs
 {: .nolineno }
 
 ## Traefik
-Traefik is a edge-router and reverse proxy to make it easy to publish your services to the web. One of it's main benefits is how easily it integrates into Kubernetes, Docker, AWS, etc. A striped down example of my `docker-compose.yml` and required config files for Traefik can be found [here](https://git.lder.dev/jesse/homelab/src/branch/master/docker-compose/traefik).
+Traefik is a edge-router and reverse proxy to make it easy to publish your services to the web. One of it's main benefits is how easily it integrates into Kubernetes, Docker, AWS, etc. A striped down example of my `docker-compose.yml` and required config files for Traefik can be found [here](https://github.com/jamolnng/homelab/tree/master/docker-compose/traefik).
 
 It's as easy as running `docker compose up -d` to get Traefik basics up and running. Then to add services to Traefik it's as easy as adding a handful of labels to your services `docker-compose.yml`.
 
