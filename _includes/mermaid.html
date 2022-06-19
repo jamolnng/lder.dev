@@ -53,7 +53,9 @@
     mermaid.initialize(mermaidConf);
 
     window.addEventListener("message", updateMermaid);
+
+    const toggle = new ModeToggle();
+    toggle.notify();
+
   });
-  const toggle = new ModeToggle();
-  toggle.notify();
 </script>
