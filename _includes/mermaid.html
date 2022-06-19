@@ -53,11 +53,7 @@
     mermaid.initialize(mermaidConf);
 
     window.addEventListener("message", updateMermaid);
-    // https://github.com/cotes2020/jekyll-theme-chirpy/issues/536
-    // *******
-    // added this to fix mermaid failing to render without refresh
-    const toggle = new ModeToggle();
-    toggle.notify();
-    /// ********
   });
+  const toggle = new ModeToggle();
+  toggle.notify();
 </script>
