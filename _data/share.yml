@@ -12,7 +12,7 @@ platforms:
     link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
   -
     type: Reddit
-    icon: "fab fa-reddite"
+    icon: "fab fa-reddit"
     link: "https://www.reddit.com/submit?url=URL&title=TITLE"
   # -
   #   type: Telegram
