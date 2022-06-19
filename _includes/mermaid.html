@@ -2,9 +2,9 @@
   mermaid-js loader
 -->
 
-<!-- <script src="{{ site.data.assets[origin].mermaid.js }}"></script> -->
+<script src="{{ site.data.assets[origin].mermaid.js | relative_url }}"></script>
 
-<script defer>
+<script>
   $(function() {
     function updateMermaid(event) {
       if (event.source === window && event.data &&
@@ -40,8 +40,7 @@
     }
 
     let mermaidConf = {
-      theme: initTheme,  /* <default|dark|forest|neutral> */
-      startOnLoad: true
+      theme: initTheme  /* <default|dark|forest|neutral> */
     };
 
     /* Markdown converts to HTML */
@@ -55,4 +54,10 @@
 
     window.addEventListener("message", updateMermaid);
   });
+    // https://github.com/cotes2020/jekyll-theme-chirpy/issues/536
+    // *******
+    // added this to fix mermaid failing to render without refresh
+    const toggle = new ModeToggle();
+    toggle.notify();
+    /// ********
 </script>
