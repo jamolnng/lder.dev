@@ -188,7 +188,7 @@ http:
 
 Finally, you'll need a `acme.json` file. This file is going to be empty and Traefik will fill it with your TLS certificates when it starts up. However, you need to make sure this file has the correct permissions so after you create it, using `touch acme.json` for example, you need to change its permissions by doing `chmod 600 acme.json`.
 
-With this in the correct place, in this example:
+With these files in the correct place, in this example:
 ```
 ./traefik
 ├── data
