@@ -200,7 +200,7 @@ With this in the correct place, in this example:
 
 You can simply run `docker compose up -d` and Traefik will start, register your backends given in your `config.yml` file, and start doing the DNS-01 challenges to generate your TLS certificates. Please note that it may take a few minutes for your certificates to be generated. Your sites will be accessible during this time, but you may see warnings in your browser.
 
-Now just make sure you have the corrent DNS records to point you to your websites and you should be good to go accessing them. Stpeaking of DNS...
+Now just make sure you have the corrent DNS records to point you to your websites and you should be good to go accessing them. Speaking of DNS...
 
 ## DNS-01 challenge problems
 > *It's always DNS* - Jeff Geerling
