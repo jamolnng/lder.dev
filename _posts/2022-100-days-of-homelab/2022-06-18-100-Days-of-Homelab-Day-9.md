@@ -9,14 +9,14 @@ mermaid: true
 I run my fair share of self-hosted applications and 18 of those have Web UIs. Forwarding ports for the public ones and remembering those ports as well as domain names could get confusing and is not best practice. This is where a reverse proxy comes in handy. A reverse proxy accepts all your incoming traffic and forward it to the correct backend based on the hostname or port.
 
 ## Security concerns
-In my quick and dirty intial set up I had those running off of HAProxy on my OPNsense router since there is official plugin support for it. However, since I have been beefing up my security and locking things down on my network a bit, I figured it was best to not have my public facing proxy running on my router. Even though everything is already [proxied through Cloudflare]({% post_url 2022-06-16-100-Days-of-Homelab-Day-6 %}) and my firewall blocks the rest, I still felt moving it off the router onto its own service in my DMZ network add another layer.
+In my quick and dirty initial set up I had those running off of HAProxy on my OPNsense router since there is official plugin support for it. However, since I have been beefing up my security and locking things down on my network a bit, I figured it was best to not have my public facing proxy running on my router. Even though everything is already [proxied through Cloudflare]({% post_url 2022-06-16-100-Days-of-Homelab-Day-6 %}) and my firewall blocks the rest, I still felt moving it off the router onto its own service in my DMZ network add another layer.
 
 ## Traefik
 [Traefik](https://traefik.io/) is a edge-router and reverse proxy that [I have used before]({% post_url 2022-06-15-100-Days-of-Homelab-Day-5 %}). While I will not be using some of the best features, like the auto-discovery of docker containers (since Traefik will be running on its own host), it is still a great application to use and is has good documentation.
 
 To get started with Traefik you will need for files:
 * Your `docker-compose.yml`
-* A Traefic config `traefik.yml`
+* A Traefik config `traefik.yml`
 * A server config `config.yml`
 * And an empty `acme.json`
 
@@ -114,7 +114,7 @@ certificatesResolvers:
 ```
 {: file="traefik.yml" }
 
-Then you'll need a `config.yml`. This, as previously mentioned, is one way to configure your backend servers for Traefik. Here I've configured two example servers. The first `example` will be accesible through Traefik at the domain `example.domain.tld` and the second `secure_example` will be accesible similarly through the domain `secure_example.domain.tld`. What makes these two different is that `secure_example` is using the `secure` middleware created at the bottom of the file. This middleware limits access to `secure_example.domain.tld` to only IP addresses coming from a local network. This means if someome tried to get to `secure_example.domain.tld` outside of your network Traefik would block the request.
+Then you'll need a `config.yml`. This, as previously mentioned, is one way to configure your backend servers for Traefik. Here I've configured two example servers. The first `example` will be accessible through Traefik at the domain `example.domain.tld` and the second `secure_example` will be accessible similarly through the domain `secure_example.domain.tld`. What makes these two different is that `secure_example` is using the `secure` middleware created at the bottom of the file. This middleware limits access to `secure_example.domain.tld` to only IP addresses coming from a local network. This means if someone tried to get to `secure_example.domain.tld` outside of your network Traefik would block the request.
 
 ```yaml
 http:
@@ -200,7 +200,7 @@ With this in the correct place, in this example:
 
 You can simply run `docker compose up -d` and Traefik will start, register your backends given in your `config.yml` file, and start doing the DNS-01 challenges to generate your TLS certificates. Please note that it may take a few minutes for your certificates to be generated. Your sites will be accessible during this time, but you may see warnings in your browser.
 
-Now just make sure you have the corrent DNS records to point you to your websites and you should be good to go accessing them. Speaking of DNS...
+Now just make sure you have the correct DNS records to point you to your websites and you should be good to go accessing them. Speaking of DNS...
 
 ## DNS-01 challenge problems
 > *It's always DNS* - Jeff Geerling
