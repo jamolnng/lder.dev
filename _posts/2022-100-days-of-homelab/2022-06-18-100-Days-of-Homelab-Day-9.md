@@ -2,7 +2,7 @@
 title: "Day 9: Moving from HAProxy to Traefik"
 date: 2022-06-19 12:00:00 -600
 categories: [homelab, 100-days-of-homelab]
-tags: [docker, proxy, traefik, haproxy]
+tags: [docker, proxy, traefik, haproxy, dns]
 mermaid: true
 ---
 
