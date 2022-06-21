@@ -62,8 +62,6 @@ volumes:
   host:
     path: /var/lib/drone/temp
 
-branches: main
-
 ---
 kind: pipeline
 type: docker
@@ -78,9 +76,9 @@ steps:
     remote: git@github.com:jamolnng/lder.dev.git
     force: false
     commit: false
+
 trigger:
   event:
   - promote
   target:
   - production
-branches: main
