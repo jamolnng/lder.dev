@@ -27,6 +27,7 @@ steps:
     - "echo \"title: '${DRONE_REPO}'\" >> ./_config_dev.yml"
     - bundle install
     - bundle config set --local deployment 'true'
+    - echo Gemfile.lock
     - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
 
 - name: rebuild-cache
