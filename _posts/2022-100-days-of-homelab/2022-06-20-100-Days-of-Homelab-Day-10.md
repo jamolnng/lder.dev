@@ -2,7 +2,7 @@
 title: "Day 10: Configure OPNsense for casting to Roku devices between VLANs"
 date: 2022-06-20 12:00:00 -600
 categories: [homelab, 100-days-of-homelab]
-tags: [networking, opnsense, firewall]
+tags: [networking, opnsense, firewall, iot]
 mermaid: true
 ---
 
