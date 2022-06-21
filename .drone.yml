@@ -25,8 +25,8 @@ steps:
     - "echo \"url: 'https://staging.lder.dev'\" > ./_config_dev.yml"
     - "echo \"baseurl: '/${DRONE_REPO}'\" >> ./_config_dev.yml"
     - "echo \"title: '${DRONE_REPO}'\" >> ./_config_dev.yml"
-    - bundle config set --local deployment 'true'
     - bundle install
+    - bundle config set --local deployment 'true'
     - JEKYLL_ENV=production bundle exec jekyll build --verbose --config _config.yml,_config_dev.yml
 
 - name: rebuild-cache
