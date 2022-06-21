@@ -67,4 +67,4 @@ Then in your other VLAN you will want a rule allowing any device to connect to a
 
 And at least for me, this was all I needed. Now I can more securely use my Roku across my Users and IoT VLAN.
 
-![](/assets/img/posts/2022-100-days-of-homelab/day010/cast.png | width=100)
+<img src="/assets/img/posts/2022-100-days-of-homelab/day010/cast.png" width="50%" />
