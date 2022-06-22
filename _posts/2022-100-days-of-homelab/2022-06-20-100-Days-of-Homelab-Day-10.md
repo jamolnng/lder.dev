@@ -58,10 +58,14 @@ In your IoT network you will need to create a rule that allows any IoT device, u
 
 ![IoT Firewall Rules](/assets/img/posts/2022-100-days-of-homelab/day010/firewall-iot.png)
 
-Then in your other VLAN you will want a rule allowing any device to connect to any device on the IoT network port `8060`.
+Then in your other VLAN you will want a rule allowing any device to connect to any device on the IoT network port `8060` via TCP.
 
-![IoT Firewall Rules](/assets/img/posts/2022-100-days-of-homelab/day010/firewall-users.png)
+#### Minor Update
+> After playing around for a bit I realized this did not work with casting Spotify. After a bit of packet sniffing you also need to allow port `38745` as well as the original `8060`
+{: .prompt-info }
+
+![User Firewall Rules](/assets/img/posts/2022-100-days-of-homelab/day010/firewall-users.png)
 
 And at least for me, this was all I needed. Now I can more securely use my Roku across my Users and IoT VLAN. You could go assign your Roku a static IP and lock things down some more, but I feel this is good enough for most.
 
-<img src="/assets/img/posts/2022-100-days-of-homelab/day010/cast.png" width="50%" />
+<img src="/assets/img/posts/2022-100-days-of-homelab/day010/cast.png" width="40%" />
