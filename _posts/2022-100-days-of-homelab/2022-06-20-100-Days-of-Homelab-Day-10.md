@@ -60,8 +60,7 @@ In your IoT network you will need to create a rule that allows any IoT device, u
 
 Then in your other VLAN you will want a rule allowing any device to connect to any device on the IoT network port `8060` via TCP.
 
-#### Minor Update
-> After playing around for a bit I realized this did not work with casting Spotify. After a bit of packet sniffing you also need to allow port `38745` as well as the original `8060`
+> Minor Update: After playing around for a bit I realized this did not work with casting Spotify. After a bit of packet sniffing you also need to allow port `38745` as well as the original `8060`
 {: .prompt-info }
 
 ![User Firewall Rules](/assets/img/posts/2022-100-days-of-homelab/day010/firewall-users.png)
