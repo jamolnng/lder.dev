@@ -16,4 +16,8 @@ The problem I found is that you need Jekyll to generate this file and I could no
 
 Now it took me a while because as you may have guessed, I am not that familiar with Ruby or Jekyll so it was a bit of trial and error. I was deciphering error messages and changing the build pipeline before I got it right.
 
+You can see my pain in this chart of my builds
+
+![Build Times Diagram](/assets/img/posts/2022-100-days-of-homelab/day011/build-times.png)
+
 But in the end it worked and now you and I are on version 5.2.1, great!
