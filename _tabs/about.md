@@ -18,7 +18,7 @@ Full-time PhD student, full-time homelabber, no-time sleeper
   - [Motorola MB7621 Cable Modem](#motorola-mb7621-cable-modem)
   - [Aruba S2500-48P](#aruba-s2500-48p)
   - [TP-Link TL-SG108E](#tp-link-tl-sg108e)
-  - [Netgear R6400](#netgear-r6400)
+  - [Ubiquiti U6-AP-Pro](#ubiquiti-u6-ap-pro)
 
 ## Computers
 ### Desktop
@@ -95,4 +95,7 @@ Dell R210ii running OPNsense. No 10 gigabit ports... yet
 ### TP-Link TL-SG108E
 * 8 Gigabit Ports
 
-### Netgear R6400
+### Ubiquiti U6-AP-Pro
+
+# Network Layout
+![Network Layout](/assets/img/network.png)
