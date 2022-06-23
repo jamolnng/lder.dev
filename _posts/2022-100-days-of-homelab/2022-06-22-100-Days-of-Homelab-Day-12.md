@@ -8,13 +8,13 @@ mermaid: true
 
 I recently ran out of room on my Proxmox installation SSD. To be fair, it was not that difficult since it is only 120GB. Big mistake for not buying a larger one initially, I just did not know what my plans were at the time or that the Intel i5-12400 I have in there would be so powerful. I thought I would be CPU limited before storage, but running all my services and with a few people on my [Valheim]({% post_url 2022-06-11-100-Days-of-Homelab-Day-1 %}) server it only reaches around 3-5% CPU usage with a low load averages of around `0.20, 0.21, 0.32`. Therefore in order to get the most out of my machine and be able to host more services, games, and other things I definitely need more space.
 
-Now I do have a NAS with plenty of storage space available, especially since I have two 4TB HDDs coming soon. Proxmox easily allows you to integrate this via SMB/CIFS or ZFS shares.
+Now I do have a NAS with plenty of storage space available, especially since I have two more 4TB HDDs coming soon. Proxmox easily allows you to integrate this via SMB/CIFS or ZFS shares.
 
 ![SMB/CIFS Data Share Dialog](/assets/img/posts/2022-100-days-of-homelab/day012/proxmox-cifs.png)
 
 I could just store my VMs and LXC containers on the NAS. However, this would be slow compared to a local SSD.
 
-Overall I like Proxmox and I use it instead of the many other solutions because of its great LXC container support which are much more lightweight than a full VM. The annoying thing about Proxmox is you have to have a cluster if you want to easily clone or move hosts between machines. Now clustering can definitely be a great feature, especially in enterprise scenarios, but in my homelab when I am trying to move from one SSD to another on the same server I do not really have the option to cluster.
+Now overall I like Proxmox and I use it instead of the many other solutions because of its great LXC container support which are much more lightweight than a full VM. The annoying thing about Proxmox is you have to have a cluster if you want to easily clone or move hosts between machines. Now clustering can definitely be a great feature, especially in enterprise scenarios, but in my homelab when I am trying to move from one SSD to another on the same server I do not really have the option to cluster.
 
 Even when using Proxmox Backup Server to manage backups like I am, you need a cluster to restore to a different machine than they were created on.
 
